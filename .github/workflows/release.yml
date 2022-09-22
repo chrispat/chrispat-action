@@ -1,0 +1,13 @@
+name: 'release'
+on: # rebuild any PRs and main branch changes
+#   push:
+#   workflow_dispatch:
+  release:
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Running action
+        uses: actions-on-packages/package-action@main

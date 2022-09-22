@@ -1,0 +1,19 @@
+name: Use the Composite Action with Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Do anything else
+        run: echo "Pretend to do other things" 
+
+      # Uses the Composite Action
+      - name: Build and Push the image
+        uses: ./
+        

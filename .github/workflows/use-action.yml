@@ -2,6 +2,8 @@ name: Use the Composite Action with Actions
 
 on:
   workflow_dispatch:
+  schedule:
+  - cron: '0 0 * * 5'
 
 jobs:
   build:
